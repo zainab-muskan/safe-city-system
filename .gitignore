@@ -1,0 +1,24 @@
+# Node.js
+node_modules/
+npm-debug.log
+.env
+.env.local
+
+# Next.js
+.next/
+out/
+build/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Uploads / Images
+backend/uploads/snapshots/*
+!backend/uploads/snapshots/.gitkeep
+
+# OS Files
+.DS_Store
+Thumbs.db

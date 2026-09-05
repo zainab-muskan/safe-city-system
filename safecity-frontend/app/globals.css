@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg-deep text-text-primary font-body antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+  ::selection {
+    @apply bg-signal-teal/30;
+  }
+  :focus-visible {
+    outline: 2px solid #00d9c0;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-mono font-medium;
+  }
+  .badge-critical {
+    @apply badge bg-alert-critical/15 text-alert-critical border border-alert-critical/30;
+  }
+  .badge-warning {
+    @apply badge bg-alert-warning/15 text-alert-warning border border-alert-warning/30;
+  }
+  .badge-resolved {
+    @apply badge bg-alert-resolved/15 text-alert-resolved border border-alert-resolved/30;
+  }
+  .badge-pending {
+    @apply badge bg-text-muted/15 text-text-muted border border-text-muted/30;
+  }
+  .card {
+    @apply bg-bg-surface border border-borderline rounded-xl;
+  }
+  .btn-primary {
+    @apply bg-signal-teal text-bg-deep font-medium px-4 py-2 rounded-lg
+    hover:bg-signal-teal/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-bg-raised text-text-primary border border-borderline font-medium px-4 py-2 rounded-lg
+    hover:border-signal-teal/50 transition-colors;
+  }
+  .input-field {
+    @apply bg-bg-raised border border-borderline rounded-lg px-3 py-2 text-text-primary
+    placeholder:text-text-muted focus:border-signal-teal/60 outline-none transition-colors w-full;
+  }
+}
